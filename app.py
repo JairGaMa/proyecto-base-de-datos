@@ -38,7 +38,6 @@ def agregar():
         descripcion = request.form['descripcion']
         precio = request.form['precio']
         stock = request.form['stock']
-
         cursor = db.cursor()
         cursor.execute("INSERT INTO producto (nomProducto, descripcion, precio, stock) VALUES (%s, %s, %s, %s)",
                        (nomProducto, descripcion, precio, stock))
